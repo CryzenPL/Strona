@@ -117,3 +117,4 @@ body{ display: flex; flex-wrap: wrap; justify-content: center; background: grey;
       transform: translateZ(-1px); /*or z-index */
       animation: rgb 6s linear infinite;
     }
+  
