@@ -52,6 +52,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     if(wygrana3 == "xxx"){
         for(x=7 ; x<10 ; x++){
@@ -59,6 +60,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     if(wygrana4 == "xxx"){
         for(x=1 ; x<8 ; x+=3){
@@ -66,6 +68,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     if(wygrana5 == "xxx"){
         for(x=2 ; x<9 ; x+=3){
@@ -73,6 +76,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     if(wygrana6 == "xxx"){
         for(x=3 ; x<10 ; x+=3){
@@ -80,6 +84,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     if(wygrana7 == "xxx"){
         for(x=1 ; x<10 ; x+=4){
@@ -87,6 +92,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     if(wygrana8 == "xxx"){
         for(x=3 ; x<8 ; x+=2){
@@ -94,6 +100,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     // -----
     if(wygrana1 == "ooo"){
@@ -102,6 +109,7 @@ function  clickField(e){
          }
          table.removeEventListener("click",clickField);
          document.getElementById("resetButton").className = "visibleButton";
+         document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(wygrana2 == "ooo"){
         for(x=4 ; x<7 ; x++){
@@ -109,6 +117,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(wygrana3 == "ooo"){
         for(x=7 ; x<10 ; x++){
@@ -116,6 +125,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(wygrana4 == "ooo"){
         for(x=1 ; x<8 ; x+=3){
@@ -123,6 +133,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(wygrana5 == "ooo"){
         for(x=2 ; x<9 ; x+=3){
@@ -130,6 +141,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(wygrana6 == "ooo"){
         for(x=3 ; x<10 ; x+=3){
@@ -137,6 +149,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(wygrana7 == "ooo"){
         for(x=1 ; x<10 ; x+=4){
@@ -144,6 +157,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(wygrana8 == "ooo"){
         for(x=3 ; x<8 ; x+=2){
@@ -151,6 +165,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Kółeczków";
     }
     if(remis == 9){
         document.getElementById("resetButton").className = "visibleButton";
