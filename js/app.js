@@ -44,6 +44,7 @@ function  clickField(e){
         }
         table.removeEventListener("click",clickField);
         document.getElementById("resetButton").className = "visibleButton";
+        document.getElementById("info").innerHTML = "Wygrana Krzyżyków";
     }
     if(wygrana2 == "xxx"){
         for(x=4 ; x<7 ; x++){
@@ -168,6 +169,7 @@ function  clickField(e){
         document.getElementById("p8").innerHTML = "";
         document.getElementById("p9").innerHTML = "";
         document.getElementById("resetButton").className = "invisibleButton";
+        document.getElementById("info").innerHTML = "";
         startPoint = "x";
         remis = 0;
     }

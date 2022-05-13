@@ -24,21 +24,28 @@
 
    <style>
      td {
-      border: 1px solid black ; 
+      border: 2px solid black ; 
       width: 300px;
       height: 300px;
       font-size: 80px;
       text-align: center;
+      background-color: darkslategray; 
+      color: white;
      }
      .winColor {
        font-size: 80px;
-       color: green;
+       color: rgb(14, 173, 14);
      }
      .invisibleButton {
        display: none;
      }
      .visibleButton {
        display: block;
+     }
+     #table {
+       display: flex;
+       align-items: center;
+       justify-content: center;
      }
    </style>
   </head>
@@ -59,11 +66,11 @@
             <td id="p8"></td>
             <td id="p9"></td>
           </tr>
-          <button class="btn btn-outline-dark invisibleButton" id="resetButton">Reset</button>
+          <button class="btn btn-outline-dark invisibleButton" id="resetButton"">Reset</button>
         </table>
         
 
-
+          <div id="info" style="text-align: center; font-size:80px;"></div>
           <script type="text/javascript" src="js/mdb.min.js"></script>
           <script type="text/javascript" src="js/app.js"></script>
 
