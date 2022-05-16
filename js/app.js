@@ -80,19 +80,13 @@ function  clickField(e){
     resetButton = document.getElementById("resetButton");
     resetButton.addEventListener("click",resetButtonF)
     function resetButtonF(e) {
+    for(x=1 ; x<10 ; x++){
+        document.getElementById("p"+x).innerHTML = "";
         table.addEventListener("click",clickField);
-        document.getElementById("p1").innerHTML = "";
-        document.getElementById("p2").innerHTML = "";
-        document.getElementById("p3").innerHTML = "";
-        document.getElementById("p4").innerHTML = "";
-        document.getElementById("p5").innerHTML = "";
-        document.getElementById("p6").innerHTML = "";
-        document.getElementById("p7").innerHTML = "";
-        document.getElementById("p8").innerHTML = "";
-        document.getElementById("p9").innerHTML = "";
         document.getElementById("resetButton").className = "invisibleButton";
         document.getElementById("info").innerHTML = "";
         startPoint = "x";
         remis = 0;
+        }
     }
 }

@@ -31,6 +31,8 @@
       text-align: center;
       background-color: darkslategray; 
       color: white;
+      opacity: 0.8;
+
      }
      .winColor {
        font-size: 80px;
@@ -42,6 +44,17 @@
      .visibleButton {
        display: block;
      }
+     .center {
+      display: flex;
+      justify-content: center;
+      padding-top: 4px;
+     }
+     .centerImg {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
      #table {
        display: flex;
        align-items: center;
@@ -49,7 +62,7 @@
      }
    </style>
   </head>
-  <body style="background-image: url(https://wallpapercave.com/wp/wp4676582.jpg);">
+  <body style="background-image: url(https://wallpapercave.com/wp/wp4676582.jpg); background-size: 100%;">
         <table id="table">
           <tr>
             <td id="p1"></td>
@@ -66,10 +79,10 @@
             <td id="p8"></td>
             <td id="p9"></td>
           </tr>
-          <div><button class="btn btn-outline-dark invisibleButton" id="resetButton">Restart</button></div>
+
         </table>
         
-
+          <div class="center"><button class="btn btn-outline-dark invisibleButton" id="resetButton">Restart</button></div>
           <div id="info" style="text-align: center; font-size:80px; color: white; text-shadow:
           -2px -2px 0 #000,
           2px -2px 0 #000,
@@ -77,6 +90,5 @@
           2px 2px 0 #000;  "></div>
           <script type="text/javascript" src="js/mdb.min.js"></script>
           <script type="text/javascript" src="js/app.js"></script>
-
   </body>
 </html>
