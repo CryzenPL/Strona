@@ -410,33 +410,52 @@ p.gone{
 	<div class="dark_red">  <div class="dr"><small>266</small></div>   <div class="symbol"><b>Lr</b></div> <div class="num_of_ele"><small>102</small></div> </div>
 </div>
 
-<div class="center">
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-dark btn-rounded btn-outline-light" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-    Rozpocznij Grę
-  </button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Wybierz poziom trudności</h5>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body center">
-			<button type="button" class="btn btn-outline-success" data-mdb-ripple-color="dark" data-mdb-dismiss="modal" style="margin: 5px;" id="easy">Łatwy</button>
-			<button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark" data-mdb-dismiss="modal" style="margin: 5px;" id="medium">Średni</button>
-			<button type="button" class="btn btn-outline-danger" data-mdb-ripple-color="dark" data-mdb-dismiss="modal" style="margin: 5px;" id="hard">Niemożliwy</button>
+<!-- Button trigger modal -->
+<div id="panelGame" class="text-center p-2">
+	<button id="startBtn" type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+		Start
+	  </button><br/><br/>
+	
+		<div id="input" class="easy">
+			<div class="row"><div class="col-4"></div><div class="col-4">
+				
+			<input  type="text" id="autocomplete" placeholder="Podaj pierwiastek" class="form-control"></input>
+			<ul style="background-color: aliceblue;" id="results"></ul>
+			</div><div class="col-4"></div>
 		</div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<script src="/js/app.js"></script>
-<script src="/js/pierwiastki.js"></script>
-</body>
-</html>
+		  </div>
+	
+	</div>
+	  
+	  <!-- Modal -->
+	  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Wybierz poziom trudności</h5>
+			  <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body text-center">
+			<button type="button" id="easy" class= "btn easy btn-outline-success" data-mdb-ripple-color="dark" data-mdb-dismiss="modal" aria-label="Łatwy">Łatwy</button>
+			<button type="button" id="medium" class="btn btn-outline-warning" data-mdb-ripple-color="dark" data-mdb-dismiss="modal" aria-label="Średni">Średni</button>
+			<button type="button" id="hard" class="btn btn-outline-danger" data-mdb-ripple-color="dark" data-mdb-dismiss="modal" aria-label="Zabójczy">Zabójczy</button>
+	
+			</div>
+			
+			<div class="modal-footer">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	<script src="../js/app.js"></script>
+	<script src="../js/pierwiastki.js"></script>
+	<script src="../js/autocomplete.js"></script>
+	<!-- MDB -->
+	<script
+	  type="text/javascript"
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+	></script>
+	</body>
+	</html>
