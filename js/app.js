@@ -2,6 +2,9 @@ var pierwiastki = [];
 var y = 0;
 container = document.getElementsByClassName("symbol");
 // console.log(container.length);
+
+function randomElement(){
+
 for(x=0; x<container.length; x++){
         if(container[x].textContent != "DE" 
         &&container[x].textContent != "DEL" 
@@ -27,3 +30,17 @@ wylosowany = wylosowany.parentNode ;
 
 wylosowany.setAttribute("class","checked");
 console.log(wylosowany);
+}
+
+easy = document.getElementById("easy");
+medium = document.getElementById("medium");
+hard = document.getElementById("hard");
+
+easy.addEventListener("click",gameStart);
+medium.addEventListener("click",gameStart);
+hard.addEventListener("click",gameStart);
+
+function gameStart(e){
+    console.log(e.target.id);
+    randomElement();
+}
