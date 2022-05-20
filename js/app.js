@@ -1,98 +1,105 @@
-var startPoint = "x";
-var p = [1,2,3,4,5];
-wygrana = [];
-console.log(p[2]);
-remis = 0;
-table.addEventListener("click",clickField);
-function  clickField(e){
-    if (e.target.innerHTML == ""){
-    remis++;
-    e.target.innerHTML = startPoint;
-    if (startPoint == "x"){
-        startPoint = "o";
-    } else{
-        startPoint = "x"
+var pierwiastki = [];
+var y = 0;
+var odp1 = "";
+//random = 0 ;
+container = document.getElementsByClassName("symbol");
+// console.log(container.length);
+
+function randomElement(){
+
+for(x=0; x<container.length; x++){
+        if(container[x].textContent != "DE" 
+        &&container[x].textContent != "DEL" 
+        &&container[x].textContent != "57-71" 
+        && container[x].textContent != "89-103"){
+        pierwiastki[y] = container[x].textContent;
+        y++
     }
+}
+for(x=0; x<pierwiastki.length; x++){
+    // console.log("x;" +x+ ","+pierwiastki[x]);
+}
+random = Math.floor(Math.random() * pierwiastki.length) ;
+console.log(pierwiastki[random]);
+
+for(x = 0 ;  x < container.length ;  x++){
+
+    if(container[x].textContent == pierwiastki[random]) {
+    wylosowany = container[x];
     }
+}
+console.log(wylosowany)
+wylosowany = wylosowany.parentNode ;
 
-    for(x=1 ; x<10 ; x++){
-        p[x] =  document.getElementById("p"+x).innerHTML;
-    }
+wylosowany.setAttribute("class","checked");
+console.log(wylosowany);
 
-    function getElementP(elem,what) {
-        document.getElementById("p"+elem).innerHTML = '<div class="winColor">'+what+'</div>'
-    }
+odp1 = pierwiastek[random][1];
+console.log("odp1:"+odp1);
 
-    function getResult(info) {
-        document.getElementById("info").innerHTML = info ;
-    }
+}
 
-    function wygranaGry(x,kto,par1,par2,par3) {
-        // x - unikalny identyfikator
-        // która konfiguracja wygra
-        // par1,par2,par3 - pola które wygrywają
-        wygrana[x]=p[par1] + p[par2] + p[par3];
+easy = document.getElementById("easy");
+medium = document.getElementById("medium");
+hard = document.getElementById("hard");
 
-        console.log(wygrana[x]);
-            if(wygrana[x] == kto){
+easy.addEventListener("click",gameStart);
+medium.addEventListener("click",gameStart);
+hard.addEventListener("click",gameStart);
 
-                if (kto == "xxx"){
 
-                    getElementP(par1,"x");
-                    getElementP(par2,"x");
-                    getElementP(par3,"x");
-                    getResult("Wygrana Krzyżyków");
-                    table.removeEventListener("click",clickField);
-                    document.getElementById("resetButton").className = "visibleButton";
-                }
-                if (kto == "ooo"){
-
-                    getElementP(par1,"o");
-                    getElementP(par2,"o");
-                    getElementP(par3,"o");
-                    getResult("Wygrana Kółeczków");
-                    table.removeEventListener("click",clickField);
-                    document.getElementById("resetButton").className = "visibleButton";
-                }
-          
-                resetButton.disabled = false;
-            }
-    }
-
-    wynik = [];
-    wynik[1] = 'xxx';
-    wynik[2] = 'ooo';
-
-    for(x=1; x<3; x++){
-        wygranaGry(1,wynik[x],1,2,3);
-        wygranaGry(2,wynik[x],4,5,6);
-        wygranaGry(3,wynik[x],7,8,9);
-        wygranaGry(4,wynik[x],1,4,7);
-        wygranaGry(5,wynik[x],2,5,8);
-        wygranaGry(6,wynik[x],3,6,9);
-        wygranaGry(7,wynik[x],1,5,9);
-        wygranaGry(8,wynik[x],3,5,7);
-    }
-
-    if(remis == 9){
-        document.getElementById("resetButton").className = "visibleButton";
-    }
-    resetButton = document.getElementById("resetButton");
-    resetButton.addEventListener("click",resetButtonF)
-    function resetButtonF(e) {
-        table.addEventListener("click",clickField);
-        document.getElementById("p1").innerHTML = "";
-        document.getElementById("p2").innerHTML = "";
-        document.getElementById("p3").innerHTML = "";
-        document.getElementById("p4").innerHTML = "";
-        document.getElementById("p5").innerHTML = "";
-        document.getElementById("p6").innerHTML = "";
-        document.getElementById("p7").innerHTML = "";
-        document.getElementById("p8").innerHTML = "";
-        document.getElementById("p9").innerHTML = "";
-        document.getElementById("resetButton").className = "invisibleButton";
-        document.getElementById("info").innerHTML = "";
-        startPoint = "x";
-        remis = 0;
+function gameStart(e){
+    console.log(e.target.id);
+    randomElement();
+    startBtn.classList.add("hide");
+    inputAuto.classList.remove("hide");
+}
+function checkQestion(event){
+    if(event.keyCode == 13){
+    
+        console.log("działa");
+    
+    
+    
+        inputAuto = document.getElementById("inputAuto").value;
+        console.log(inputAuto)
+    
+        random = Math.floor(Math.random() * pierwiastki.length) ;
+        console.log(pierwiastki[random]);
+        
+        odp1 = pierwiastek[random][1];
+        console.log("odp1:"+odp1);
+        
+        for(x = 0 ;  x < container.length ;  x++){
+        
+            if(container[x].textContent == pierwiastki[random])
+            wylosowany = container[x];
+        }
+        console.log(wylosowany)
+        wylosowany = wylosowany.parentNode ;
+        
+        wylosowany.setAttribute("class","checked");
+        console.log(wylosowany);
+        
+        if(odp1 == inputAuto){
+            wylosowany.classList.remove("checked");
+         
+            wylosowany.classList.add("goodAnswer");
+        
+            inputAuto = document.getElementById("inputAuto").value;
+            console.log(inputAuto)
+        }
+        
+        if(odp1 != inputAuto){
+            wylosowany.classList.remove("checked");
+         
+            wylosowany.classList.add("badAnswer");
+        
+            inputAuto = document.getElementById("inputAuto").value;
+            console.log(inputAuto)
+            
+        }
+    
+    
     }
 }
