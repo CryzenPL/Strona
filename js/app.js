@@ -1,105 +1,87 @@
-var pierwiastki = [];
+var elementsTable = [];
+var elementRandom = [];
+var answer = "";
 var y = 0;
-var odp1 = "";
-//random = 0 ;
+var k = 0;
+var point = 0;
 container = document.getElementsByClassName("symbol");
-// console.log(container.length);
-
-function randomElement(){
 
 for(x=0; x<container.length; x++){
-        if(container[x].textContent != "DE" 
-        &&container[x].textContent != "DEL" 
-        &&container[x].textContent != "57-71" 
-        && container[x].textContent != "89-103"){
-        pierwiastki[y] = container[x].textContent;
-        y++
+    if(container[x].textContent != "DE" 
+    &&container[x].textContent != "DEL" 
+    &&container[x].textContent != "57-71" 
+    && container[x].textContent != "89-103"){
+    elementsTable[y] = container[x];
+    y++
+}
+}
+
+function randomElements(){
+    if(elementRandom.length < elementsTable.length){
+    randomNumber = Math.floor(Math.random() * elements.length) ;
+    answer = elements[randomNumber][1];
+    randomElement = elementsTable[randomNumber].parentNode ;
+    if(elementRandom.includes(randomNumber)){
+        randomElements();
+    }
+    else{
+        randomElement.setAttribute("class","checked");
+        elementRandom.push(randomNumber);
+        }
+        console.log(randomElement);
+        console.log(randomElement);
+        console.log("answer  "+answer);
     }
 }
-for(x=0; x<pierwiastki.length; x++){
-    // console.log("x;" +x+ ","+pierwiastki[x]);
-}
-random = Math.floor(Math.random() * pierwiastki.length) ;
-console.log(pierwiastki[random]);
 
-for(x = 0 ;  x < container.length ;  x++){
-
-    if(container[x].textContent == pierwiastki[random]) {
-    wylosowany = container[x];
-    }
-}
-console.log(wylosowany)
-wylosowany = wylosowany.parentNode ;
-
-wylosowany.setAttribute("class","checked");
-console.log(wylosowany);
-
-odp1 = pierwiastek[random][1];
-console.log("odp1:"+odp1);
-
-}
 
 easy = document.getElementById("easy");
 medium = document.getElementById("medium");
 hard = document.getElementById("hard");
+resetButton = document.getElementById("resetButton");
 
 easy.addEventListener("click",gameStart);
 medium.addEventListener("click",gameStart);
 hard.addEventListener("click",gameStart);
+resetButton.addEventListener("click",resetGame);
 
+function resetGame(){
+    for(x = 0; x < elements.length; x++){
+        elementsTable[x].parentNode.classList.remove("goodAnswer");
+        elementsTable[x].parentNode.classList.remove("badAnswer");
+        elementsTable[x].parentNode.classList.remove("checked");
+        elementsTable[x].parentNode.classList.add("grey");
+        elementRandom =  [];
+        point = 0;
+    }
+}
 
 function gameStart(e){
     console.log(e.target.id);
-    randomElement();
-    startBtn.classList.add("hide");
-    inputAuto.classList.remove("hide");
+    randomElements();
+    document.getElementById("startButton").classList.add("hide");
+    document.getElementById("resetButton").classList.remove("hide");
+    document.getElementById("inputAuto").classList.remove("hide");
+    statistic.innerHTML = "<h1>Liczba Punktów: "+point + "</h1>" ;
 }
 function checkQestion(event){
     if(event.keyCode == 13){
     
-        console.log("działa");
-    
-    
-    
         inputAuto = document.getElementById("inputAuto").value;
-        console.log(inputAuto)
-    
-        random = Math.floor(Math.random() * pierwiastki.length) ;
-        console.log(pierwiastki[random]);
-        
-        odp1 = pierwiastek[random][1];
-        console.log("odp1:"+odp1);
-        
-        for(x = 0 ;  x < container.length ;  x++){
-        
-            if(container[x].textContent == pierwiastki[random])
-            wylosowany = container[x];
+        if(inputAuto == answer){
+            randomElement.classList.remove("checked");
+            randomElement.classList.add("goodAnswer");
+            point++;
         }
-        console.log(wylosowany)
-        wylosowany = wylosowany.parentNode ;
-        
-        wylosowany.setAttribute("class","checked");
-        console.log(wylosowany);
-        
-        if(odp1 == inputAuto){
-            wylosowany.classList.remove("checked");
-         
-            wylosowany.classList.add("goodAnswer");
-        
-            inputAuto = document.getElementById("inputAuto").value;
-            console.log(inputAuto)
+        else{
+            randomElement.classList.remove("checked");
+            randomElement.classList.add("badAnswer");
         }
-        
-        if(odp1 != inputAuto){
-            wylosowany.classList.remove("checked");
-         
-            wylosowany.classList.add("badAnswer");
-        
-            inputAuto = document.getElementById("inputAuto").value;
-            console.log(inputAuto)
-            
-        }
-    
-    
+        statistic.innerHTML = "<h1>Liczba Punktów: "+point + "</h1>" ;
+        randomElements();
     }
+}
+
+if(elementRandom.length == elementsTable.length){
+  
 }
