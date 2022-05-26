@@ -73,6 +73,7 @@ function gameStart(e){
     document.getElementById("startButton").classList.add("hide");
     document.getElementById("resetButton").classList.remove("hide");
     document.getElementById("inputAuto").classList.remove("hide");
+    document.getElementById("powers").classList.remove("hide");
     statistic.innerHTML = "<h1>Liczba Punktów: "+point + "</h1>" ;
 }
 function checkQestion(event){
@@ -116,5 +117,8 @@ function countDown() {
   }
 
 if(elementRandom.length == elementsTable.length){
-  
+
+    
+    
 }
+
