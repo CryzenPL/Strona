@@ -115,6 +115,19 @@ function countDown() {
       document.getElementById("time").innerHTML = "Koniec Czasu";
     }
   }
+  
+  addTimeBtn.addEventListener("click",addTime);
+  function addTime() {
+      //document.getElementById("addTime").innerHTML = seconds + 10;
+      console.log("dziala");
+      countDownDate += 10*1000 ;
+  }
+
+  function getPower(){
+      if(point == 5){
+        addTimeBtn.classList.remove("hide");
+      }
+  }
 
 if(elementRandom.length == elementsTable.length){
 

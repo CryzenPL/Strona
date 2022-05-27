@@ -315,7 +315,7 @@
 			<div class="grid-item prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></div>
 
 			<div class="grid-item">
-				<div class="slide1 mySlides"><i class="fa-solid fa-stopwatch"></i> + 10 Sekund </div>
+				<button id="addTimeBtn" class="getPower hide"><div class="slide1 mySlides" ><i class="fa-solid fa-stopwatch"></i> + 10 Sekund </div></button>
 				<div class="slide2 mySlides"><i class="fa-solid fa-crosshairs"></i> Wybierz Pierwiastek </div>
 				<div class="slide3 mySlides"><i class="fa-solid fa-vial"></i> Podpowiedź Nazwy </div>
 			</div>
@@ -354,7 +354,7 @@
 		function currentSlide(n) {
 		  showSlides(slideIndex = n);
 		}
-		
+	
 		function showSlides(n) {
 		  let i;
 		  let slides = document.getElementsByClassName("mySlides");
