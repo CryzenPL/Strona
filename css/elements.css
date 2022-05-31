@@ -23,11 +23,25 @@
 .other {
   display: flex ;
   flex-direction: column;
+    gap: 200px ;
 }
-.other > div {
+
+
+.size >div {
+  margin-left: 100px ;
+  padding: 5px;
   display: flex;
-  justify-content: center;
+  gap: 10px;
 }
+
+.test {
+  display: flex;
+}
+.test > div {
+  flex:50%;
+  justify-content: end;
+}
+
 
 
 .container > div {
@@ -49,4 +63,36 @@ h1 {
 .trends > h1 {
   display: flex;
   justify-content: center;
+}
+
+.profile {
+  display: flex ;
+  flex-direction: column;
+}
+.other > .profile {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.distance {
+  gap: 10px;
+}
+.distance > div {
+  gap: 10px;
+}
+
+.size {
+  font-size: 28px;
+}
+.size > div {
+  font-size: 20px;
+}
+
+.fa-twitter {
+  color: rgb(8, 150, 231);
+}
+
+.black {
+  color: black;
 }
