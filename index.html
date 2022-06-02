@@ -28,25 +28,51 @@
 
 
 	  <div class="container">
-			<div class="flex-3 other distance size">
-				<div><i class="fa-brands fa-twitter"></i></div>
-				<div><i class="fa-solid fa-house black"></i>Home</div>
-				<div><i class="fa-solid fa-hashtag black"></i>Explore</div>
-				<div><i class="fa-solid fa-bell black"></i>Notifications</div>
-				<div><i class="fa-solid fa-envelope black"></i>Messages</div>
-				<div><i class="fa-solid fa-bookmark black"></i>Bookmarks</div>
-				<div><i class="fa-solid fa-clipboard-list black"></i>Lists</div>
-				<div><i class="fa-solid fa-user black"></i>Profile</div>
-				<div><i class="fa-solid fa-circle-info black"></i>More</div>
-				<div><button>Tweet</button></div>
-				<div class="profile"><button style="height: 50px; "><i class="fa-solid fa-user"></i>Mój profil</button> </div>
+			<div class="flex-3 ">
+				<div class="other distance size">
+					<div><i class="fa-brands fa-twitter" style="font-size: 24px;"></i></div>
+					<div><i class="fa-solid fa-house black"></i><div>Home</div></div>
+					<div><i class="fa-solid fa-hashtag black"></i>Explore</div>
+					<div><i class="fa-solid fa-bell black"></i>Notifications</div>
+					<div><i class="fa-solid fa-envelope black"></i>Messages</div>
+					<div><i class="fa-solid fa-bookmark black"></i>Bookmarks</div>
+					<div><i class="fa-solid fa-clipboard-list black"></i>Lists</div>
+					<div><i class="fa-solid fa-user black"></i>Profile</div>
+					<div><i class="fa-solid fa-circle-info black"></i>More</div>
+					<div><button type="button" class="btn btn-primary btn-rounded" style="font-size: 15px; width: 75%;">Tweet</button>				</div>
+				</div>
+				<div class="profile">
+					<div>
+						<button type="button" class="btn btn-outline-light btn-rounded" data-mdb-ripple-color="dark" >
+							<div class="bIcon">
+								<div>
+									<i class="fa-solid fa-circle-user black" style="font-size: 40px ;"></i>
+								</div>
+								<div class="bText">
+									<div id="nickname">Nickname</div>
+									<div id="nicknameId">Nickname Id</div>
+								</div>	
+							</div>
+						</button>
+				</div>
+				</div>
 			</div>
 			<div class="flex-4 menu">
 				<div>Tweet</div>
 				<div>Tweety</div>
 			</div>
-			<div class="flex-3 other">
-				<div>Szukanie</div>
+			<div class="flex-3 other right border">
+				<div class="searchBar">
+					<div class="input-group">
+						<div class="form-outline">
+							<input type="search" id="form1" class="form-control" />
+							<label class="form-label" for="form1">Search</label>
+						</div>
+							<button type="button" class="btn btn-primary">
+								<i class="fas fa-search"></i>
+							</button>
+				  	</div>
+				</div>
 				<div class="trends">
 					<h1>Trends for you</h1>
 					<div>Jakas opcja 1</div>

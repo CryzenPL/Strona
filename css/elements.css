@@ -23,7 +23,7 @@
 .other {
   display: flex ;
   flex-direction: column;
-    gap: 200px ;
+  justify-content: space-between;
 }
 
 
@@ -31,6 +31,7 @@
   margin-left: 100px ;
   padding: 5px;
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -42,9 +43,14 @@
   justify-content: end;
 }
 
-
-
 .container > div {
+  border: 1px solid black ;
+}
+
+.border {
+  border: 1px solid black;
+}
+.border > div {
   border: 1px solid black ;
 }
 
@@ -54,6 +60,7 @@ h1 {
 
 .trends {
   display: flex ;
+  height: 100%;
   flex-direction: column;
 }
 .trends > div {
@@ -65,9 +72,22 @@ h1 {
   justify-content: center;
 }
 
+.right {
+  display: flex ;
+  height: 100%;
+  flex-direction: column;
+}
+.right > div {
+  display: flex;
+  justify-content: center;
+}
+
 .profile {
   display: flex ;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
 }
 .other > .profile {
   display: flex;
@@ -95,4 +115,28 @@ h1 {
 
 .black {
   color: black;
+}
+
+.bText {
+  display: flex;
+  flex-direction: column;
+}
+.bIcon {
+  display: flex;
+  gap: 5px;
+}
+
+#nickname {
+  color: black;
+}
+#nicknameId {
+  color: lightgray;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
